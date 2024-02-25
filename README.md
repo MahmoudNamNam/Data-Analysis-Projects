@@ -4,14 +4,15 @@ Welcome to my Data Analysis Projects repository! Here, I explore and analyze var
 
 ## Investigating Netflix Movies
 
-![Netflix Logo](link-to-netflix-logo.png) <!-- Include a relevant image if you have one -->
+![Netflix Logo](![image](https://github.com/MahmoudNamNam/Data-Analysis-Projects/assets/148398760/a6aa3e19-1267-4ea6-99f9-5d1b26840863)
+) <!-- Include a relevant image if you have one -->
 
 This project is my first venture into data analysis, where I delve into the world of Netflix movies. I aim to uncover trends, patterns, and interesting information about the movies available on the platform.
 
 ### Project Overview
 
-- **Dataset**: [Netflix Movies Dataset](https://github.com/MahmoudNamNam/Data-Analysis-Projects/tree/main/Investigating%20Netflix%20Movies)
-- **Tools**: Python, Jupyter Notebooks, Pandas, Matplotlib, Seaborn
+- **The project and Dataset**: [Netflix Movies Dataset](https://github.com/MahmoudNamNam/Data-Analysis-Projects/tree/main/Investigating%20Netflix%20Movies)
+- **Tools**: Python, Jupyter Notebooks, Pandas, Matplotlib, Seaborn , sklearn
 
 ### Key Steps
 
@@ -19,11 +20,3 @@ This project is my first venture into data analysis, where I delve into the worl
 2. **Exploratory Data Analysis (EDA)**: Utilized visualizations to understand the distribution and relationships within the data.
 3. **Insights and Findings**: Documented interesting findings and insights gained from the analysis.
 
-### How to Run
-
-If you'd like to explore the analysis yourself, follow these steps:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/MahmoudNamNam/Data-Analysis-Projects.git
