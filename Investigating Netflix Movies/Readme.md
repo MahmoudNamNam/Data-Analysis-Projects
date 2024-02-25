@@ -67,6 +67,8 @@ The dataset (`netflix_data.csv`) contains information about Netflix shows, inclu
 - Python 3.x
 - Pandas
 - Matplotlib
+- scikit-learn
+- seaborn 
 
 
 ## Results
