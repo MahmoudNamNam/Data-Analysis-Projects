@@ -4,8 +4,6 @@ Welcome to my Data Analysis Projects repository! Here, I explore and analyze var
 
 ## Investigating Netflix Movies
 
-![Netflix Logo](![Netflix-new-icon](https://github.com/MahmoudNamNam/Data-Analysis-Projects/assets/148398760/fbe28046-899e-4a33-bce9-95b398248adb)
-) <!-- Include a relevant image if you have one -->
 
 This project is my first venture into data analysis, where I delve into the world of Netflix movies. I aim to uncover trends, patterns, and interesting information about the movies available on the platform.
 
