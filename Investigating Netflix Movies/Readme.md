@@ -79,8 +79,4 @@ Summarize key findings from the analysis, including visualizations and insights 
 
 Contributions are welcome! Feel free to open issues, suggest improvements, or contribute new analyses.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 🎬📊📈 Happy analyzing the world of Netflix entertainment! 🍿🎉🔍
