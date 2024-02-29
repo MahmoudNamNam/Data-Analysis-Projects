@@ -4,7 +4,7 @@
 This project involves the analysis of policing activities in Rhode Island and its correlation with weather conditions. Two datasets, one related to policing ('ri.csv') and another related to weather ('weather.csv'), were used for this analysis. The project aims to explore patterns, trends, and correlations between policing data and various weather features.
 
 ## Datasets
-- **Policing Dataset ('ri.csv'):** Contains information about traffic stops in Rhode Island, including details about stops, outcomes, and demographics of drivers.
+- **Policing Dataset ('police.csv'):** Contains information about traffic stops in Rhode Island, including details about stops, outcomes, and demographics of drivers.
 
 - **Weather Dataset ('weather.csv'):** Includes weather information such as temperature, wind speed, and various weather types for the corresponding dates.
 
