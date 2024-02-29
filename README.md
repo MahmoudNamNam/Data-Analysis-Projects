@@ -26,7 +26,7 @@ In my second project, I explore the intriguing relationship between weather cond
 
 ### Project Overview
 
-- **The project and Dataset**: [Policing and Weather Analysis]([Link_to_Repository](https://github.com/MahmoudNamNam/Data-Analysis-Projects/tree/main/Analyzing%20Police%20Activity))
+- **The project and Dataset**: [Policing and Weather Analysis](https://github.com/MahmoudNamNam/Data-Analysis-Projects/tree/main/Analyzing%20Police%20Activity)
 - **Tools**: Python, Jupyter Notebooks, Pandas, Matplotlib, Seaborn
 
 ### Key Components
@@ -38,6 +38,6 @@ In my second project, I explore the intriguing relationship between weather cond
 
 ### Repository Link
 
-**Repository:** [Link to Repository]([Link_to_Repository](https://github.com/MahmoudNamNam/Data-Analysis-Projects/tree/main/Analyzing%20Police%20Activity))
+**Repository:** ([Link_to_Repository](https://github.com/MahmoudNamNam/Data-Analysis-Projects/tree/main/Analyzing%20Police%20Activity))
 
 Feel free to explore the projects and provide feedback or contributions. I'm continually working to enhance my data analysis skills and welcome collaboration and insights from the community!
