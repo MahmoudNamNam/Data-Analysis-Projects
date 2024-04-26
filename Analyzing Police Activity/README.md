@@ -1,7 +1,7 @@
 # Police and Weather Analysis
 
 ## Introduction
-This project involves the analysis of policing activities in Rhode Island and its correlation with weather conditions. Two datasets, one related to policing ('ri.csv') and another related to weather ('weather.csv'), were used for this analysis. The project aims to explore patterns, trends, and correlations between policing data and various weather features.
+This project involves the analysis of policing activities in Rhode Island and its correlation with weather conditions. Two datasets, one related to policing ('police.csv') and another related to weather ('weather.csv'), were used for this analysis. The project aims to explore patterns, trends, and correlations between policing data and various weather features.
 
 ## Datasets
 - **Policing Dataset ('police.csv'):** Contains information about traffic stops in Rhode Island, including details about stops, outcomes, and demographics of drivers.
@@ -33,7 +33,7 @@ This project involves the analysis of policing activities in Rhode Island and it
 
 2. Navigate to the project directory: `cd police-weather-analysis`
 
-3. Open and run the Jupyter Notebook: `jupyter notebook Analysis.ipynb`
+3. Open and run the Jupyter Notebook: `jupyter notebook Analyzing 'Police Activity.ipynb'`
 
 ## Dependencies
 - pandas
