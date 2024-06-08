@@ -20,7 +20,9 @@ def preprocess_test_data(test, xlim, ylim):
 xlim = [-74.03, -73.77]
 ylim = [40.63, 40.85]
 test = preprocess_test_data(test,xlim, ylim)
-feature_columns = [col for col in test.columns if col!= 'trip_duration']
+feature_columns = ['month', 'season', 'weekday', 'is_weekend',
+        'pickup_hour', 'pickup_cluster_label',
+        'dropoff_cluster_label', 'trip_distance', 'bearing', 'is_rush_hour']
 
 
 # Make predictions on the test set
@@ -28,7 +30,6 @@ test_predictions = model.predict(test[feature_columns])
 
 # Prepare the submission file
 submission = pd.DataFrame({
-    'id': test['id'],
     'trip_duration': test_predictions
 })
 
