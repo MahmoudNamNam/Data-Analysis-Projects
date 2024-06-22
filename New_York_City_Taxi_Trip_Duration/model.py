@@ -105,8 +105,8 @@ def preprocess_data(df, xlim, ylim):
 def train_model(X_train, y_train):
     """Train the Ridge regression model with GridSearchCV."""
     pipeline = Pipeline([
-        ('poly', PolynomialFeatures()),  # Polynomial features
         ('scaler', StandardScaler()),    # Feature scaling
+        ('poly', PolynomialFeatures()),  # Polynomial features
         ('ridge', Ridge())               # Ridge regression
     ])
 
@@ -161,9 +161,6 @@ def main():
     if action == 'train':
         train = load_data(train_data_path)
         validation = load_data(validation_data_path)
-
-        print(train.shape)
-        print(validation.shape)
 
         check_missing_data(train, validation)
 
