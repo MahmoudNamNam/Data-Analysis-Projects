@@ -5,7 +5,7 @@ from sklearn.linear_model import Ridge
 from sklearn.preprocessing import StandardScaler, PolynomialFeatures
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV, cross_val_score
-from sklearn.metrics import mean_absolute_error, mean_squared_error
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import joblib
 import warnings
 
@@ -30,7 +30,7 @@ def filter_geographical_boundaries(df, xlim, ylim):
         (df.dropoff_latitude > ylim[0]) & (df.dropoff_latitude < ylim[1])
     ]
 
-def apply_clustering(df, n_clusters=5):
+def apply_clustering(df, n_clusters=6):
     """Apply KMeans clustering to pickup and dropoff coordinates."""
     pickup_coordinates = df[['pickup_latitude', 'pickup_longitude']]
     dropoff_coordinates = df[['dropoff_latitude', 'dropoff_longitude']]
@@ -121,10 +121,18 @@ def train_model(X_train, y_train):
     return grid_search.best_estimator_
 
 def evaluate_model(model, X, y):
-    """Evaluate the model and print cross-validated RMSE."""
+    """Evaluate the model and print cross-validated RMSE, MAE, and R² score."""
+    y_pred = model.predict(X)
+    rmse = np.sqrt(mean_squared_error(y, y_pred))
+    mae = mean_absolute_error(y, y_pred)
+    r2 = r2_score(y, y_pred)
+
     cv_scores = cross_val_score(model, X, y, cv=5, scoring='neg_mean_squared_error')
     cv_rmse = np.sqrt(-cv_scores)
     print(f'Cross-validated RMSE: {cv_rmse.mean()} ± {cv_rmse.std()}')
+    print(f'RMSE: {rmse}')
+    print(f'MAE: {mae}')
+    print(f'R² score: {r2}')
 
 def save_model(model, filename):
     """Save the trained model to a file."""
@@ -201,8 +209,10 @@ def main():
         y_val_pred = model.predict(X_val)
         val_rmse = np.sqrt(mean_squared_error(y_val, y_val_pred))
         val_mae = mean_absolute_error(y_val, y_val_pred)
+        val_r2 = r2_score(y_val, y_val_pred)
         print(f'Validation RMSE: {val_rmse}')
         print(f'Validation MAE: {val_mae}')
+        print(f'Validation R² score: {val_r2}')
 
     elif action == 'predict':
         test = load_data(test_data_path)
@@ -228,8 +238,10 @@ def main():
                 y_sample_true = sample_submission.loc[test_ids]['trip_duration']
                 test_rmse = np.sqrt(mean_squared_error(y_sample_true, y_test_pred))
                 test_mae = mean_absolute_error(y_sample_true, y_test_pred)
+                test_r2 = r2_score(y_sample_true, y_test_pred)
                 print(f'Sample Submission RMSE: {test_rmse}')
                 print(f'Sample Submission MAE: {test_mae}')
+                print(f'Sample Submission R² score: {test_r2}')
             except KeyError as e:
                 print(f"KeyError: {e}. Ensure that test_ids are present in the sample submission.")
         else:
