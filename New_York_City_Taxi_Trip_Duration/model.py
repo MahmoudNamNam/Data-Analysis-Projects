@@ -158,9 +158,13 @@ def main():
     validation_data_path = './Data/val.csv'
     test_data_path = './Data/test.csv'
     sample_submission_path = './Data/sample_submission.csv'
-    model_filename = 'model.pkl'
+    model_filename = 'best_model.pkl'
     submission_filename = 'submission.csv'
-
+    feature_columns = [
+                'month', 'season', 'weekday', 'is_weekend',
+                'pickup_hour', 'pickup_cluster_label',
+                'dropoff_cluster_label', 'trip_distance', 'bearing', 'is_rush_hour'
+            ]
     xlim = [-74.03, -73.77]
     ylim = [40.63, 40.85]
 
@@ -178,11 +182,7 @@ def main():
         train = remove_outliers(train, 'trip_duration')
         validation = remove_outliers(validation, 'trip_duration')
 
-        feature_columns = [
-            'month', 'season', 'weekday', 'is_weekend',
-            'pickup_hour', 'pickup_cluster_label',
-            'dropoff_cluster_label', 'trip_distance', 'bearing', 'is_rush_hour'
-        ]
+        
 
         X_train = train[feature_columns]
         y_train = train['trip_duration']
@@ -195,12 +195,6 @@ def main():
         validation = load_data(validation_data_path)
         validation = preprocess_data(validation, xlim, ylim)
         validation = remove_outliers(validation, 'trip_duration')
-
-        feature_columns = [
-            'month', 'season', 'weekday', 'is_weekend',
-            'pickup_hour', 'pickup_cluster_label',
-            'dropoff_cluster_label', 'trip_distance', 'bearing', 'is_rush_hour'
-        ]
 
         X_val = validation[feature_columns]
         y_val = validation['trip_duration']
@@ -220,11 +214,6 @@ def main():
 
         test = preprocess_data(test, xlim, ylim)
         test_ids = test['id']
-        feature_columns = [
-            'month', 'season', 'weekday', 'is_weekend',
-            'pickup_hour', 'pickup_cluster_label',
-            'dropoff_cluster_label', 'trip_distance', 'bearing', 'is_rush_hour'
-        ]
         test_features = test[feature_columns]
 
         model = load_model(model_filename)
